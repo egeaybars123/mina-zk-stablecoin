@@ -40,5 +40,10 @@
   },
   "engines": {
     "node": ">=18.14.0"
+  },
+  "dependencies": {
+    "avail-js-sdk": "^0.3.0",
+    "dotenv": "^16.4.7",
+    "mina-fungible-token": "^1.1.0"
   }
 }
