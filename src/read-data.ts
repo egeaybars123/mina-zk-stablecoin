@@ -26,11 +26,11 @@ export const ReadData = async (txHash: string, blockHash: string) => {
             process.exit(1)
         }
 
-        console.log(JSON.stringify(tx))
+        //console.log(JSON.stringify(tx))
         const dataHex = tx.method.args.map((a) => a.toString()).join(", ")
         // Data retrieved from the extrinsic data
         let str = ""
-        for (let n = 0; n < dataHex.length; n += 2) {
+        for (let n = 2; n < dataHex.length; n += 2) {
             str += String.fromCharCode(parseInt(dataHex.substring(n, n + 2), 16))
         }
         console.log(`This is the string that was submitted: ${str}`)
